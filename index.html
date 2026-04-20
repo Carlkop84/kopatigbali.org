@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carl Adams Kopati Gbali, PhD</title>
+<title>Dr Carl Adams Kopati Gbali</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#F7F4EE;--ink:#1A1A18;--muted:#6B6860;
-  --accent:#1B3F5E;--accent-light:#E8EEF4;--gold:#B8892A;
+  --cream:#F5F2EB;--ink:#1A1A18;--muted:#5C6B5E;
+  --accent:#1B4332;--accent-light:#D8EAE0;--gold:#D4A017;
   --border:rgba(26,26,24,0.12);
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'DM Sans',system-ui,sans-serif;
@@ -19,7 +19,7 @@ body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-heigh
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,244,238,0.93);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:56px}
 .nav-logo{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink)}
-.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
 .nav-links a{font-size:12px;font-weight:400;color:var(--muted);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
 .nav-links a:hover{color:var(--accent)}
 
@@ -127,31 +127,81 @@ footer{border-top:0.5px solid rgba(247,244,238,0.1);background:var(--ink);paddin
 .conf-photos.one-col{display:grid;grid-template-columns:1fr;gap:1rem}
 .conf-photos img{width:100%;height:260px;object-fit:cover;border-radius:2px;border:0.5px solid var(--border)}
 .conf-photos.one-col img{height:300px}
+
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.cert-card{background:#fff;border:0.5px solid var(--border);border-radius:2px;padding:1.25rem 1.5rem;position:relative;transition:border-color 0.2s}
+.cert-card:hover{border-color:var(--accent)}
+.cert-card.featured{border-left:3px solid var(--accent)}
+.cert-issuer{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
+.cert-name{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:0.6rem}
+.cert-meta{display:flex;flex-direction:column;gap:0.2rem;margin-bottom:0.5rem}
+.cert-date{font-size:12px;color:var(--muted)}
+.cert-id{font-size:10.5px;color:var(--muted);font-style:italic;word-break:break-all}
+.cert-badge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--accent-light);color:var(--accent)}
+
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group label{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(247,244,238,0.5)}
+.form-group input,.form-group textarea{background:rgba(247,244,238,0.06);border:0.5px solid rgba(247,244,238,0.2);border-radius:2px;padding:0.75rem 1rem;font-size:13px;color:var(--cream);font-family:var(--sans);outline:none;transition:border-color 0.2s;resize:none}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(247,244,238,0.3)}
+.form-group input:focus,.form-group textarea:focus{border-color:rgba(247,244,238,0.5)}
+.contact-form button{background:var(--cream);color:var(--ink);border:none;padding:12px 28px;border-radius:2px;font-size:12px;font-weight:500;letter-spacing:0.05em;cursor:pointer;transition:background 0.2s;font-family:var(--sans);align-self:flex-start}
+.contact-form button:hover{background:rgba(247,244,238,0.85)}
+
+.services-intro{max-width:700px;margin-bottom:3rem}
+.services-intro p{font-family:var(--serif);font-size:19px;color:var(--muted);line-height:1.8}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);margin-bottom:3rem}
+.service-card{background:var(--cream);padding:2rem;transition:background 0.2s}
+.service-card:hover{background:#fff}
+.service-icon{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--accent);opacity:0.25;line-height:1;margin-bottom:0.75rem}
+.service-title{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink);margin-bottom:0.75rem;line-height:1.3}
+.service-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.service-list{list-style:none;display:flex;flex-direction:column;gap:0.3rem}
+.service-list li{font-size:12.5px;color:var(--muted);padding-left:1rem;position:relative}
+.service-list li::before{content:"—";position:absolute;left:0;color:var(--accent);font-size:11px}
+.services-cta{background:var(--accent-light);border:0.5px solid var(--border);border-radius:2px;padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.services-cta p{font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.5}
+
+.clients-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}
+.client-card{background:#fff;border:0.5px solid var(--border);border-radius:2px;padding:1.75rem;position:relative;transition:border-color 0.2s}
+.client-card:hover{border-color:var(--accent)}
+.client-name{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);margin-bottom:0.2rem}
+.client-country{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+.client-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.client-tag{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:2px;background:var(--accent-light);color:var(--accent)}
+.clients-note{text-align:center;padding:1.5rem;border:0.5px solid var(--border);border-radius:2px;background:var(--accent-light)}
+.clients-note p{font-size:14px;color:var(--muted)}
+.clients-note a{color:var(--accent);text-decoration:none;font-weight:500}
+.clients-note a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
 
 <nav>
-  <span class="nav-logo">Carl Adams Kopati Gbali, PhD</span>
+  <span class="nav-logo">Dr Carl Adams Kopati Gbali</span>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#publications">Research</a></li>
     <li><a href="#conferences">Conferences</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <div class="hero">
   <div class="hero-left">
-    <div class="hero-tag">Lead Researcher · SOAS University of London</div>
-    <h1 class="hero-name">Carl Adams<br><em>Kopati Gbali</em></h1>
+    <div class="hero-tag">Lead Researcher · SOAS University of London · Available for Consulting</div>
+    <h1 class="hero-name">Dr Carl Adams<br>Kopati Gbali</h1>
     <p class="hero-title">Innovation Ecosystems &amp; AI Governance Analyst<br>Intellectual Property · Technology Policy · Innovation Economics</p>
     <p class="hero-desc">Policy analyst and researcher at the intersection of AI, innovation ecosystems, and technology governance — with 13+ years of experience spanning national regulatory institutions, international organisations, and applied research across Africa and Asia.</p>
     <div class="hero-cta">
       <a href="#experience" class="btn-primary">View experience</a>
       <a href="#contact" class="btn-outline">Get in touch</a>
+      <a href="https://kopatigbaliblog.wordpress.com/blog/" target="_blank" class="btn-outline">Download CV</a>
     </div>
   </div>
   <div class="hero-right">
@@ -423,9 +473,52 @@ footer{border-top:0.5px solid rgba(247,244,238,0.1);background:var(--ink);paddin
 
   </div>
 </section>
-<section id="engagements">
+<section id="clients">
   <div class="section-header">
     <span class="section-number">06</span>
+    <div><h2 class="section-title">Past Consultations</h2><p class="section-subtitle">Organisations I have advised and consulted for.</p></div>
+  </div>
+
+  <div class="clients-grid">
+
+    <div class="client-card">
+      <div class="client-name">Sumitomo Corporation</div>
+      <div class="client-country">Japan</div>
+      <div class="client-desc">Led integrated regulatory, market, and policy analysis for a Network-as-a-Service (NaaS) feasibility assessment across Mozambique and Tanzania — informing executive go/no-go decisions for a $4B opportunity.</div>
+      <span class="client-tag">Market Strategy &amp; Regulatory Analysis</span>
+    </div>
+
+    <div class="client-card">
+      <div class="client-name">SoftBank Technology Corp</div>
+      <div class="client-country">Japan</div>
+      <div class="client-desc">Conducted feasibility analysis of mobile payment adoption across six CEMAC countries, assessing regulatory, technical, and infrastructure barriers to digital financial services deployment.</div>
+      <span class="client-tag">Digital Payments &amp; Market Intelligence</span>
+    </div>
+
+    <div class="client-card">
+      <div class="client-name">SORA Technology</div>
+      <div class="client-country">Japan</div>
+      <div class="client-desc">Strategic advisory and consulting services on technology market entry and innovation policy in emerging markets.</div>
+      <span class="client-tag">Technology Advisory</span>
+    </div>
+
+    <div class="client-card">
+      <div class="client-name">DAIKI Holdings</div>
+      <div class="client-country">Japan</div>
+      <div class="client-desc">Developed strategic market-entry roadmaps and policy risk assessments for technology and services expansion across Central Africa, advising leadership on governance constraints and market sustainability.</div>
+      <span class="client-tag">Business Development &amp; Strategy</span>
+    </div>
+
+  </div>
+
+  <div class="clients-note">
+    <p>Interested in working together? View my <a href="#services">consulting services</a> or <a href="#contact">get in touch</a>.</p>
+  </div>
+
+</section>
+<section id="engagements">
+  <div class="section-header">
+    <span class="section-number">07</span>
     <div><h2 class="section-title">International engagements</h2><p class="section-subtitle">Intergovernmental processes and multi-stakeholder international dialogue.</p></div>
   </div>
   <div class="eng-list">
@@ -448,34 +541,242 @@ footer{border-top:0.5px solid rgba(247,244,238,0.1);background:var(--ink);paddin
   </div>
 </section>
 
+<section id="services">
+  <div class="section-header">
+    <span class="section-number">08</span>
+    <div><h2 class="section-title">Research &amp; Consulting Services</h2><p class="section-subtitle">Available for research commissions, advisory roles, and expert presentations.</p></div>
+  </div>
+
+  <div class="services-intro">
+    <p>With over 13 years of experience spanning national regulatory institutions, international organisations, and applied research, I offer tailored research and consulting services to governments, development finance institutions, think tanks, private firms, and academic institutions.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">01</div>
+      <h3 class="service-title">Commissioned Research</h3>
+      <p class="service-desc">Independent research studies on AI governance, innovation ecosystems, technology policy, and digital market regulation — tailored to your organisation's specific questions and delivered as policy briefs, working papers, or full research reports.</p>
+      <ul class="service-list">
+        <li>AI &amp; emerging technology governance</li>
+        <li>Innovation ecosystem mapping</li>
+        <li>Digital market &amp; platform regulation</li>
+        <li>Technology diffusion in emerging economies</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">02</div>
+      <h3 class="service-title">Policy Advisory</h3>
+      <p class="service-desc">Strategic policy guidance for governments, regulators, and international organisations navigating complex technology governance challenges — from regulatory design to implementation frameworks.</p>
+      <ul class="service-list">
+        <li>Regulatory framework design</li>
+        <li>Technology licensing &amp; spectrum governance</li>
+        <li>IP policy &amp; innovation incentives</li>
+        <li>Digital infrastructure strategy</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">03</div>
+      <h3 class="service-title">Expert Presentations &amp; Keynotes</h3>
+      <p class="service-desc">Engaging, evidence-based presentations for conferences, workshops, and institutional events on AI governance, venture capital in Africa, innovation policy, and technology transformation in the Global South.</p>
+      <ul class="service-list">
+        <li>Conference keynotes &amp; panel discussions</li>
+        <li>Executive briefings &amp; workshops</li>
+        <li>Academic seminars &amp; lectures</li>
+        <li>Policy dialogue facilitation</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">04</div>
+      <h3 class="service-title">Market &amp; Feasibility Studies</h3>
+      <p class="service-desc">Data-driven market intelligence and feasibility assessments for organisations entering or operating in African and Asian technology markets — combining regulatory analysis with investment landscape mapping.</p>
+      <ul class="service-list">
+        <li>Market entry &amp; feasibility analysis</li>
+        <li>Regulatory risk assessment</li>
+        <li>Investment landscape mapping</li>
+        <li>Stakeholder &amp; ecosystem analysis</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">05</div>
+      <h3 class="service-title">Capacity Building &amp; Training</h3>
+      <p class="service-desc">Targeted training programmes and workshops for policy analysts, regulators, and researchers on innovation policy, AI governance frameworks, and data-driven research methods.</p>
+      <ul class="service-list">
+        <li>Innovation policy training</li>
+        <li>AI governance workshops</li>
+        <li>Research methods &amp; data analysis</li>
+        <li>Policy brief writing &amp; communication</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">06</div>
+      <h3 class="service-title">Institutional Partnerships</h3>
+      <p class="service-desc">Long-term research collaborations with universities, think tanks, and development organisations — co-authoring research, contributing to multi-country programmes, and building joint analytical frameworks.</p>
+      <ul class="service-list">
+        <li>Joint research programmes</li>
+        <li>Co-authorship &amp; peer review</li>
+        <li>Multi-country research design</li>
+        <li>Grant proposal development</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="services-cta">
+    <p>Interested in working together? Describe your project or enquiry using the contact form below.</p>
+    <a href="#contact" class="btn-primary">Get in touch</a>
+  </div>
+
+</section>
+<section id="certifications">
+  <div class="section-header">
+    <span class="section-number">09</span>
+    <div><h2 class="section-title">Certifications</h2><p class="section-subtitle">Professional development &amp; technical training.</p></div>
+  </div>
+  <div class="cert-grid">
+
+    <div class="cert-card featured">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">AI for Everyone: Master the Basics</div>
+      <div class="cert-meta">
+        <span class="cert-date">Jul 2025</span>
+        <span class="cert-id">ID: f6ad245d996a4a6abf82f10a314d7b7e</span>
+      </div>
+      <span class="cert-badge">Verified Certificate</span>
+    </div>
+
+    <div class="cert-card featured">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">Software Engineering Basics for Everyone</div>
+      <div class="cert-meta">
+        <span class="cert-date">Nov 2022</span>
+        <span class="cert-id">ID: bc163a6fbe954e1caf4932af54bee32f</span>
+      </div>
+      <span class="cert-badge">Verified Certificate</span>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">Python for AI Project Development</div>
+      <div class="cert-meta"><span class="cert-date">2026</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">Python Essentials</div>
+      <div class="cert-meta"><span class="cert-date">Nov 2023</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">Git and GitHub Essentials</div>
+      <div class="cert-meta"><span class="cert-date">Jun 2023</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">Linux Commands &amp; Shell Scripting</div>
+      <div class="cert-meta"><span class="cert-date">Feb 2023</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">Agile Development and Scrum Fundamentals</div>
+      <div class="cert-meta"><span class="cert-date">Jan 2023</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">DevOps Essentials</div>
+      <div class="cert-meta"><span class="cert-date">Dec 2022</span></div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer">edX</div>
+      <div class="cert-name">Cloud Computing Core</div>
+      <div class="cert-meta"><span class="cert-date">Dec 2022</span></div>
+    </div>
+
+  </div>
+</section>
 <section id="contact" class="contact-section">
   <div class="section-header">
-    <span class="section-number">07</span>
+    <span class="section-number">10</span>
     <div><h2 class="section-title">Contact</h2></div>
   </div>
   <div class="contact-inner">
     <div>
       <p class="contact-intro">Open to research collaborations, advisory engagements, policy dialogue, and consulting opportunities across AI governance, innovation policy, and technology regulation.</p>
       <p class="contact-note">Based in London, UK · Available from September 2026</p>
+      <div class="contact-links" style="margin-top:1.5rem">
+        <a href="https://www.linkedin.com/in/carl-adams-kopati-gbali-ph-d-b0130627/" target="_blank" class="contact-link">
+          <div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">carl-adams-kopati-gbali-ph-d</span></div>
+        </a>
+        <a href="https://kopatigbaliblog.wordpress.com" target="_blank" class="contact-link">
+          <div><span class="contact-link-label">Blog</span><span class="contact-link-value">kopatigbaliblog.wordpress.com</span></div>
+        </a>
+      </div>
     </div>
-    <div class="contact-links">
-      <a href="mailto:kopatigbali@gmail.com" class="contact-link">
-        <div><span class="contact-link-label">Email</span><span class="contact-link-value">kopatigbali@gmail.com</span></div>
-      </a>
-      <a href="https://www.linkedin.com/in/carl-adams-kopati-gbali-ph-d-b0130627/" target="_blank" class="contact-link">
-        <div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">carl-adams-kopati-gbali-ph-d</span></div>
-      </a>
-      <a href="https://kopatigbaliblog.wordpress.com" target="_blank" class="contact-link">
-        <div><span class="contact-link-label">Blog</span><span class="contact-link-value">kopatigbaliblog.wordpress.com</span></div>
-      </a>
+    <div>
+      <p style="font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(247,244,238,0.45);margin-bottom:1rem">Send a message</p>
+      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Your email address" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="4" placeholder="How can I help you?" required></textarea>
+        </div>
+        <button type="submit">Send message</button>
+      </form>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>&copy; 2026 Carl Adams Kopati Gbali, PhD</span>
+  <span>&copy; 2026 Dr Carl Adams Kopati Gbali</span>
   <span>London, United Kingdom</span>
 </footer>
 
+
+<script>
+// Highlight active nav section on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.style.color = '';
+    if (link.getAttribute('href') === '#' + current) {
+      link.style.color = 'var(--accent)';
+    }
+  });
+});
+
+// Smooth contact form submission feedback
+const form = document.querySelector('.contact-form');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+  });
+}
+</script>
 </body>
 </html>
